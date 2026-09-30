@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Driven Cybersecurity</title>
+<style>
+
+body{margin:0; font-family:Arial; background:#f0f2f5;}
+/*
+/* 1. POSITION STICKY + Z-INDEX + DISPLAY FLEX */
+header{
+  position: sticky; /* STICKY when you scroll*/
+  top:0;
+  z-index: 1000; /* Z-INDEX is used to decide which element comes on top when two elements overlap- keeps on top */
+  background: #0a192f;
+  color: white;
+  padding: 12px;
+  display: flex; /* FLEXBOX */
+  justify-content: space-between;
+}
+
+/* 2. POSITION FIXED */
+.fix-btn{
+  position: fixed; /* FIXED always fixed on screen*/
+  bottom: 15px;
+  right: 15px;
+  background: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+/* 3. POSITION RELATIVE + ABSOLUTE */
+.banner{
+  position: relative; /* RELATIVE the reference point*/
+  height: 180px;
+  background: #112240;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+.tag{
+  position: absolute; /* ABSOLUTE  moves inside relative parent*/
+  top: 10px;
+  right: 10px;
+  background: #00ff88;
+  color: black;
+  padding: 5px 10px;
+  z-index: 2; /* on top */
+}
+.tag2{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: dodgerblue;
+  padding: 5px 10px;
+  z-index: 1; /* behind */
+}
+
+/* 4. DISPLAY PROPERTY */
+.menu span{
+  display: inline; /* INLINE shares bench stays in same line can't set width/height*/
+  margin: 0 8px;
+  /*display: block;/*BLOCK takes full bench */
+
+}
+.box{
+  display: inline-block; /* INLINE-BLOCK shares bench with same line but we can set the height/width*/
+  width: 100px;
+  height: 40px;
+  background: orange;
+  margin: 5px;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* 5. VISIBILITY vs DISPLAY NONE */
+.hide1{visibility: hidden;} /* space remains */
+.hide2{display: none;} /* NONE hides from class */
+
+/* 6. FLEXBOX FOR AI TOPICS */
+.container{
+  display: flex; /* FLEX is used to arrange items side-by-side easily */
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+.card{
+  background: white;
+  width: 220px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px gray;
+  border-top: 4px solid #00ff88;
+}
+
+/* 7. MEDIA QUERY is used to make same website look good on mobile,tablet etc*/
+@media (max-width: 600px){
+  .container{
+    flex-direction: column; /* mobile stack */
+    align-items: center;
+  }
+  .card{width: 90%;}
+  header{flex-direction: column; text-align:center;}
+  body{background: #e6f7ff;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <b>AI DRIVEN CYBERSECURITY</b>
+  <div class="menu">
+    <span>Home</span><span>Threats</span><span>AI Tools</span>
+  </div>
+</header>
+
+<div class="fix-btn">Alert: AI Active - Fixed</div>
+
+<div class="banner">
+  <h2>AI Protects You From Hackers</h2>
+  <p>Display: block, inline, inline-block demo below</p>
+  <div class="box">Firewall</div>
+  <div class="box">Antivirus</div>
+  <div class="box hide1">Hidden-1</div> <!-- visibility hidden -->
+  <div class="box hide2">Hidden-2</div> <!-- display none -->
+  <div class="box">AI Model</div>
+
+  <div class="tag">z-index: 2 - TOP</div>
+  <div class="tag2">z-index: 1 - BOTTOM</div>
+</div>
+
+<h3 style="text-align:center; margin-top:20px;">How AI Used in Cybersecurity - Flexbox</h3>
+
+<div class="container">
+  <div class="card">
+    <h4>1. Threat Detection</h4>
+    <p>AI finds viruses and malware before attack. position: relative/absolute used in banner.</p>
+  </div>
+  <div class="card">
+    <h4>2. Phishing Block</h4>
+    <p>AI detects fake emails and links. display: flex used here.</p>
+  </div>
+  <div class="card">
+    <h4>3. Zero-Day Protection</h4>
+    <p>Stops new unknown attacks. z-index shows which alert is on top.</p>
+  </div>
+</div>
+
+<p style="text-align:center; padding:10px;">Resize screen - media query will make cards vertical on mobile</p>
+
+</body>
+</html>

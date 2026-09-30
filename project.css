@@ -1,0 +1,751 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+:root {
+    --bg: #F0F6FF;
+    --soft: #E6F0FA;
+    --slate: #6A7BA2;
+    --slate-dark: #4A5D7E;
+    --slate-light: #A9B8D0;
+    --teal: #134E4A;
+    --border: #D4DFEB;
+    --white: #FFFFFF;
+    --text: #4A5A6B;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--teal)
+}
+
+.container {
+    width: 88%;
+    max-width: 1100px;
+    margin: auto
+}
+
+.section {
+    padding: 85px 0
+}
+
+.soft-bg {
+    background: var(--soft)
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--teal)
+}
+
+.section-title::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--slate), var(--teal));
+    display: block;
+    margin: 12px auto 0
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(240, 246, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border)
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0
+}
+
+.logo {
+    font-family: 'Playfair Display';
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--teal)
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 22px
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1E2F3A;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500
+}
+
+.nav-links a:hover {
+    color: var(--slate)
+}
+
+.hamburger {
+    display: none
+}
+
+/* HERO */
+.hero {
+    padding: 100px 0 80px;
+    background: linear-gradient(180deg, var(--soft) 0%, var(--bg) 100%)
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 40px;
+    align-items: center
+}
+
+.lux-badge {
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--teal);
+    padding: 6px 16px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-weight: 600
+}
+
+.hero-text h1 {
+    font-size: 54px;
+    margin: 18px 0 8px;
+    line-height: 1.1;
+    color: var(--teal);
+    font-weight: 700
+}
+
+/* FIXED: Harmeen same colour as Ayesha */
+.hero-text h1 span {
+    color: var(--teal);
+    font-style: normal;
+    font-weight: 700
+}
+
+.hero-text h2 {
+    font-family: 'Poppins';
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--slate-dark);
+    margin-bottom: 20px
+}
+
+.hero-text p {
+    font-size: 14px;
+    color: #415263;
+    max-width: 520px;
+    line-height: 1.8
+}
+
+.hero-btns {
+    display: flex;
+    gap: 14px;
+    margin-top: 28px
+}
+
+.btn {
+    padding: 13px 26px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+    display: inline-block;
+    cursor: pointer
+}
+
+.btn-gold {
+    background: var(--teal);
+    color: white;
+    box-shadow: 0 8px 20px rgba(19, 78, 74, 0.25)
+}
+
+.btn-line {
+    border: 1.5px solid #2A4A4A;
+    color: #2A4A4A;
+    background: transparent
+}
+
+.btn-line:hover {
+    background: var(--teal);
+    color: white
+}
+
+/* Right Card */
+.lux-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(106, 123, 162, 0.12)
+}
+
+.circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-family: 'Playfair Display';
+    font-size: 20px;
+    margin: 0 auto 14px;
+    font-weight: 600
+}
+
+.lux-card h3 {
+    font-size: 16px;
+    color: var(--teal);
+    margin-bottom: 4px
+}
+
+.lux-card p {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--slate-light)
+}
+
+.line {
+    width: 40px;
+    height: 1px;
+    background: var(--border);
+    margin: 16px auto
+}
+
+.mini-info {
+    font-size: 10px;
+    color: var(--slate-light)
+}
+
+/* ABOUT */
+.about-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 32px;
+    border-radius: 16px;
+    max-width: 800px;
+    margin: 30px auto 0;
+    font-size: 13.5px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(106, 123, 162, 0.06)
+}
+
+/* JOURNEY */
+.timeline {
+    max-width: 750px;
+    margin: 30px auto 0;
+    border-left: 2px solid var(--border);
+    padding-left: 35px
+}
+
+.t-item {
+    position: relative;
+    margin-bottom: 18px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 18px 20px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    transition: .3s
+}
+
+.t-item::before {
+    content: '';
+    position: absolute;
+    left: -41px;
+    top: 22px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--slate-light)
+}
+
+.t-item.active::before {
+    background: var(--teal);
+    border-color: var(--teal)
+}
+
+.t-item span {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--slate);
+    font-weight: 600
+}
+
+.t-item h3 {
+    font-size: 14px;
+    color: var(--teal);
+    font-family: 'Poppins';
+    font-weight: 600
+}
+
+.t-item p {
+    font-size: 12px;
+    color: #6B7D8F
+}
+
+/* SKILLS - WITH COLOR CHANGE ON HOVER */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px
+}
+
+.skill-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 14px;
+    text-align: center;
+    transition: all 0.35s ease;
+    cursor: pointer
+}
+
+.skill-box h4 {
+    font-family: 'Poppins';
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 14px;
+    font-weight: 600;
+    transition: .3s
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: center
+}
+
+.tags span {
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    background: var(--bg);
+    color: var(--slate-dark);
+    transition: .3s
+}
+
+/* Skills Hover - Color Change */
+.skill-box:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(19, 78, 74, 0.2);
+}
+
+.skill-box:hover h4 {
+    color: #E6F0FA;
+}
+
+.skill-box:hover .tags span {
+    background: #1A5E58;
+    color: white;
+    border-color: #2A6E68;
+}
+
+/* PROJECTS - LIFT UP ON HOVER */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 30px
+}
+
+.p-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 14px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer
+}
+
+.p-card h3 {
+    font-size: 14px;
+    color: var(--teal);
+    margin-bottom: 6px;
+    font-family: 'Poppins'
+}
+
+.p-card p {
+    font-size: 12px;
+    color: #6B7D8F;
+    line-height: 1.6
+}
+
+.tech {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--slate);
+    letter-spacing: 0.8px
+}
+
+.gold-border {
+    border: 1.5px solid var(--slate-light)
+}
+
+/* Lift effect */
+.p-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(19, 78, 74, 0.18);
+    border-color: var(--teal);
+}
+
+/* CERTIFICATIONS - LIFT UP */
+.cert-grid,
+.ach-grid,
+.tools-grid-fixed,
+.learn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px
+}
+
+.c-card,
+.a-card,
+.tool-card-fixed,
+.l-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 14px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer
+}
+
+.c-card h3,
+.a-card h3,
+.tool-card-fixed h3,
+.l-card h3 {
+    font-size: 13px;
+    color: var(--teal);
+    margin-bottom: 6px;
+    font-family: 'Poppins'
+}
+
+.c-card p,
+.a-card p,
+.tool-card-fixed p,
+.l-card p {
+    font-size: 11.5px;
+    color: #6B7D8F
+}
+
+.a-card span {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 8px
+}
+
+.tool-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: white;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 10px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: .3s
+}
+
+/* Lift effect for Certificate, Achievement, Tools */
+.c-card:hover,
+.a-card:hover,
+.tool-card-fixed:hover,
+.l-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(19, 78, 74, 0.18);
+    border-color: var(--teal);
+}
+
+.tool-card-fixed:hover .tool-icon {
+    transform: scale(1.15);
+    background: var(--slate);
+}
+
+/* VISION */
+.vision {
+    background: var(--teal);
+    padding: 70px 0
+}
+
+.vision-box {
+    text-align: center;
+    max-width: 700px;
+    margin: auto
+}
+
+.vision-box h2 {
+    color: #E6F0FA;
+    font-size: 32px;
+    margin-bottom: 16px
+}
+
+.vision-box p {
+    color: #D4E5E9;
+    font-size: 13.5px;
+    line-height: 1.8
+}
+
+/* CONTACT */
+.contact-form {
+    max-width: 480px;
+    margin: 30px auto 0;
+    display: grid;
+    gap: 12px
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px 18px;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    background: var(--white);
+    font-size: 12px;
+    outline: none;
+    font-family: 'Poppins'
+}
+
+.contact-form textarea {
+    border-radius: 18px;
+    resize: none
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--slate)
+}
+
+.full {
+    width: 100%;
+    text-align: center;
+    border: none
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    background: var(--soft);
+    font-size: 11px;
+    color: #8A9BB0
+}
+
+.footer p {
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 3px;
+    font-size: 12px
+}
+
+@media(max-width:900px) {
+
+    .hero-grid,
+    .skills-grid,
+    .project-grid,
+    .cert-grid,
+    .ach-grid,
+    .tools-grid-fixed,
+    .learn-grid {
+        grid-template-columns: 1fr
+    }
+
+    .hamburger {
+        display: block
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        background: var(--white);
+        border: 1px solid var(--border);
+        padding: 16px;
+        border-radius: 12px;
+        flex-direction: column;
+        display: none;
+        width: 180px
+    }
+
+    .nav-links.show {
+        display: flex
+    }
+
+    .hero-text h1 {
+        font-size: 38px
+    }
+}
+
+/* LOGO STYLE */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    display: center;
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border)
+}
+
+/* LIFT UP EFFECT */
+.p-card:hover,
+.c-card:hover,
+.a-card:hover,
+.tool-card-fixed:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(19, 78, 74, 0.18);
+    border-color: var(--teal);
+}
+
+/* SKILLS COLOR CHANGE */
+.skill-box:hover {
+    background: var(--teal);
+    transform: translateY(-6px);
+}
+
+.skill-box:hover h4 {
+    color: #E6F0FA;
+}
+
+.skill-box:hover .tags span {
+    background: #1A5E58;
+    color: white;
+}
+
+/* STRENGTHS SECTION */
+.strength-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.s-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 24px 18px;
+    border-radius: 14px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.s-card span {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.s-card h3 {
+    font-size: 13px;
+    color: var(--teal);
+    font-family: 'Poppins';
+    margin-bottom: 6px;
+}
+
+.s-card p {
+    font-size: 11.5px;
+    color: #6B7D8F;
+}
+
+/* Hover - Lift up + Color change */
+.s-card:hover {
+    transform: translateY(-12px);
+    background: var(--teal);
+    border-color: var(--teal);
+    box-shadow: 0 20px 40px rgba(19, 78, 74, 0.18);
+}
+
+.s-card:hover h3 {
+    color: #E6F0FA;
+}
+
+.s-card:hover p {
+    color: #D4E5E9;
+}
+
+.s-card:hover span {
+    transform: scale(1.2);
+}
+
+@media(max-width:900px) {
+    .strength-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:500px) {
+    .strength-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #134E4A;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
